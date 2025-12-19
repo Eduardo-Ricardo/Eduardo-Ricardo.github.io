@@ -1,1 +1,0 @@
-# Eduardo-Ricardo.github.io
