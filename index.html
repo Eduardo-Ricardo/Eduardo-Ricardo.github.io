@@ -5,114 +5,294 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eduardo Ricardo - Portfólio</title>
     <style>
-        /* Estilos Gerais - Simples e Limpo */
+        /* Estilos Gerais - Moderno e Fluido */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
         }
         
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: 20px auto;
             background: #fff;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Cabeçalho */
         header {
             text-align: center;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            border-bottom: 3px solid transparent;
+            border-image: linear-gradient(90deg, #667eea, #764ba2);
+            border-image-slice: 1;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+            animation: slideInDown 0.6s ease-out;
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         h1 {
             margin: 0;
-            color: #2c3e50;
-            font-size: 2.5em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.8em;
+            font-weight: 700;
+            letter-spacing: -1px;
         }
 
         .subtitle {
-            color: #7f8c8d;
-            font-size: 1.2em;
-            margin-top: 10px;
+            color: #555;
+            font-size: 1.3em;
+            margin-top: 15px;
+            font-weight: 500;
         }
 
         /* Contatos */
         .contact-info {
-            margin-top: 15px;
-            font-size: 0.9em;
+            margin-top: 20px;
+            font-size: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
         .contact-info a {
-            color: #2980b9;
+            color: #667eea;
             text-decoration: none;
-            margin: 0 10px;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .contact-info a:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
         }
 
         /* Seções */
+        section {
+            animation: fadeIn 0.8s ease-out;
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateX(5px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
         h2 {
             color: #2c3e50;
-            border-left: 5px solid #2980b9;
-            padding-left: 10px;
-            margin-top: 40px;
+            border-left: 5px solid transparent;
+            border-image: linear-gradient(180deg, #667eea, #764ba2);
+            border-image-slice: 1;
+            padding-left: 15px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .job {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .job:hover {
+            background: #f0f0f5;
+            border-left-color: #667eea;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
         }
 
         .job-title {
             font-weight: bold;
-            font-size: 1.1em;
-            margin-bottom: 5px;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            color: #2c3e50;
         }
 
         .company-date {
-            color: #7f8c8d;
+            color: #667eea;
             font-style: italic;
-            font-size: 0.9em;
-            margin-bottom: 10px;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            font-weight: 500;
         }
 
         ul {
-            padding-left: 20px;
+            padding-left: 25px;
+            margin-top: 10px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        ul li:hover {
+            transform: translateX(5px);
+            color: #667eea;
         }
 
         /* Habilidades (Tags) */
         .skills-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
+            margin-top: 20px;
         }
 
         .skill-tag {
-            background-color: #e0e0e0;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: default;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
         }
 
         /* Botão */
         .btn {
             display: inline-block;
-            background-color: #2980b9;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 10px 20px;
+            padding: 15px 35px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
+            border-radius: 30px;
+            margin-top: 30px;
             font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            position: relative;
+            overflow: hidden;
         }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
         .btn:hover {
-            background-color: #1a5276;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
         }
 
         footer {
             text-align: center;
-            margin-top: 50px;
-            font-size: 0.8em;
-            color: #777;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .skills-container {
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -133,7 +313,7 @@
 
         <section>
             <h2>Sobre Mim</h2>
-            <p>
+            <p style="text-align: justify; line-height: 1.8; font-size: 1.05em;">
                 Graduando em Engenharia de Produção pela UTFPR (2º período), unindo formação acadêmica técnica à vivência prática em gestão de pequenos negócios. Atualmente responsável pelas rotinas administrativas e operacionais na Espaço Livre Fashion, atuando desde o controle fiscal e gestão de ponto até o planejamento de corte e logística. Possuo facilidade com tecnologia (Python, C++, Linux) e vivência anterior em atendimento ao cliente. Busco oportunidades para aplicar minha visão sistêmica na otimização de processos e redução de custos.
             </p>
         </section>
@@ -191,11 +371,11 @@
         </section>
 
         <div style="text-align: center;">
-            <a href="curriculo.pdf" class="btn" target="_blank">Baixar Currículo em PDF</a>
+            <a href="EDUARDO RICARDO - CURRICULO.pdf" class="btn" download>📥 Baixar Currículo em PDF</a>
         </div>
 
         <footer>
-            <p>&copy; 2024 Eduardo Ricardo. Hospedado no GitHub Pages.</p>
+            <p>&copy; 2026 Eduardo Ricardo. Hospedado no GitHub Pages.</p>
         </footer>
     </div>
 
