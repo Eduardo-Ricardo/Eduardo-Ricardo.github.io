@@ -5,381 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Eduardo Ricardo: estudante de Engenharia de Produção, com experiência administrativa, operacional e tecnologia aplicada à melhoria de processos.">
     <title>Eduardo Ricardo | Portfólio</title>
-    <style>
-        :root {
-            --bg: #07111f;
-            --bg-soft: #0d1b2f;
-            --panel: rgba(13, 27, 47, 0.78);
-            --panel-strong: #12243d;
-            --text: #e7eef9;
-            --muted: #a8b7cc;
-            --line: rgba(255, 255, 255, 0.1);
-            --accent: #7ee0c4;
-            --accent-2: #8aa8ff;
-            --accent-3: #f6c86f;
-            --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background:
-                radial-gradient(circle at top left, rgba(138, 168, 255, 0.18), transparent 28%),
-                radial-gradient(circle at right 25%, rgba(126, 224, 196, 0.14), transparent 25%),
-                linear-gradient(160deg, var(--bg), var(--bg-soft));
-            color: var(--text);
-            line-height: 1.7;
-            min-height: 100vh;
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 42px 42px;
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent 20%, transparent 80%, rgba(0,0,0,0.2));
-            pointer-events: none;
-        }
-
-        .page {
-            width: min(1120px, calc(100% - 32px));
-            margin: 0 auto;
-            padding: 32px 0 56px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .shell {
-            backdrop-filter: blur(18px);
-            background: linear-gradient(180deg, rgba(18, 36, 61, 0.9), rgba(10, 22, 38, 0.88));
-            border: 1px solid var(--line);
-            border-radius: 28px;
-            box-shadow: var(--shadow);
-            overflow: hidden;
-        }
-
-        .hero {
-            padding: 36px;
-            display: grid;
-            grid-template-columns: 1.45fr 0.95fr;
-            gap: 24px;
-            border-bottom: 1px solid var(--line);
-            background: linear-gradient(135deg, rgba(138, 168, 255, 0.08), rgba(126, 224, 196, 0.04));
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 14px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid var(--line);
-            color: var(--muted);
-            font-size: 0.92rem;
-            letter-spacing: 0.02em;
-            margin-bottom: 18px;
-        }
-
-        .eyebrow span {
-            width: 10px;
-            height: 10px;
-            border-radius: 999px;
-            background: var(--accent);
-            box-shadow: 0 0 18px rgba(126, 224, 196, 0.6);
-        }
-
-        h1 {
-            font-size: clamp(2.4rem, 5vw, 4.6rem);
-            line-height: 1.02;
-            letter-spacing: -0.04em;
-            margin-bottom: 16px;
-        }
-
-        .headline {
-            color: var(--muted);
-            font-size: 1.08rem;
-            max-width: 60ch;
-            margin-bottom: 26px;
-        }
-
-        .cta-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 18px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            text-decoration: none;
-            padding: 14px 18px;
-            border-radius: 14px;
-            border: 1px solid transparent;
-            font-weight: 700;
-            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-primary {
-            color: #08111d;
-            background: linear-gradient(135deg, var(--accent), #b9ffe8);
-        }
-
-        .btn-secondary {
-            color: var(--text);
-            background: rgba(255, 255, 255, 0.06);
-            border-color: var(--line);
-        }
-
-        .contact-strip {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .contact-strip a {
-            color: var(--text);
-            text-decoration: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.22);
-        }
-
-        .stats {
-            display: grid;
-            gap: 14px;
-            align-content: start;
-        }
-
-        .stat-card,
-        .panel {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--line);
-            border-radius: 20px;
-            padding: 18px;
-        }
-
-        .stat-card strong {
-            display: block;
-            font-size: 2rem;
-            line-height: 1;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-
-        .stat-card p {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .content {
-            padding: 30px 36px 38px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 24px;
-            margin-top: 24px;
-        }
-
-        section + section {
-            margin-top: 24px;
-        }
-
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .section-title h2 {
-            font-size: 1.4rem;
-            letter-spacing: -0.02em;
-        }
-
-        .section-title::before {
-            content: "";
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            box-shadow: 0 0 20px rgba(138, 168, 255, 0.5);
-        }
-
-        .panel p,
-        .panel li,
-        .timeline p {
-            color: var(--muted);
-        }
-
-        .focus-list,
-        .timeline,
-        .steps {
-            list-style: none;
-            display: grid;
-            gap: 14px;
-        }
-
-        .focus-list li,
-        .timeline li,
-        .steps li {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 16px 18px;
-        }
-
-        .focus-list strong,
-        .timeline strong,
-        .steps strong {
-            color: #fff;
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .badge-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .badge {
-            padding: 10px 14px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid var(--line);
-            color: #eef4ff;
-            font-size: 0.94rem;
-        }
-
-        .timeline .meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            color: var(--accent-2);
-        }
-
-        .project {
-            display: grid;
-            gap: 10px;
-        }
-
-        .project .tag {
-            display: inline-flex;
-            width: fit-content;
-            padding: 6px 10px;
-            border-radius: 999px;
-            background: rgba(246, 200, 111, 0.14);
-            color: #ffe4af;
-            border: 1px solid rgba(246, 200, 111, 0.22);
-            font-size: 0.85rem;
-        }
-
-        .footer-cta {
-            margin-top: 24px;
-            padding: 22px;
-            border-radius: 22px;
-            background: linear-gradient(135deg, rgba(126, 224, 196, 0.14), rgba(138, 168, 255, 0.12));
-            border: 1px solid var(--line);
-            display: flex;
-            justify-content: space-between;
-            gap: 18px;
-            align-items: center;
-        }
-
-        footer {
-            padding: 22px 36px 32px;
-            color: var(--muted);
-            border-top: 1px solid var(--line);
-            font-size: 0.92rem;
-            display: flex;
-            justify-content: space-between;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .muted-note {
-            color: var(--muted);
-            font-size: 0.92rem;
-            margin-top: 10px;
-        }
-
-        @media (max-width: 900px) {
-            .hero,
-            .grid,
-            .footer-cta {
-                grid-template-columns: 1fr;
-                display: grid;
-            }
-
-            .hero,
-            .content,
-            footer {
-                padding-left: 22px;
-                padding-right: 22px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .page {
-                width: min(100% - 16px, 1120px);
-                padding: 8px 0 24px;
-            }
-
-            .shell {
-                border-radius: 20px;
-            }
-
-            .hero {
-                padding: 22px;
-            }
-
-            .content {
-                padding: 18px 22px 26px;
-            }
-
-            h1 {
-                font-size: 2.15rem;
-            }
-
-            .cta-row {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .contact-strip {
-                flex-direction: column;
-            }
-
-            footer {
-                padding: 18px 22px 24px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <main class="page">
@@ -387,22 +13,22 @@
             <section class="hero">
                 <div>
                     <div class="eyebrow"><span></span> Portfólio profissional para vagas e oportunidades</div>
-                    <h1>Eduardo Ricardo da Silva Andrade</h1>
-                    <p class="headline">
+                    <h1 id="name">Eduardo Ricardo da Silva Andrade</h1>
+                    <p id="headline" class="headline">
                         Estudante de Engenharia de Produção na UTFPR, com experiência real em rotinas administrativas,
                         operação, atendimento ao cliente e apoio à organização de processos. Eu ajudo equipes a ganhar
                         clareza, controle e execução.
                     </p>
 
                     <div class="cta-row">
-                        <a class="btn btn-primary" href="EDUARDO RICARDO - CURRICULO.pdf" download>Baixar currículo em PDF</a>
-                        <a class="btn btn-secondary" href="mailto:eduric2001@gmail.com">Entrar em contato</a>
+                        <a id="cv-link" class="btn btn-primary" href="EDUARDO RICARDO - CURRICULO.pdf" download>Baixar currículo em PDF</a>
+                        <a id="contact-email" class="btn btn-secondary" href="mailto:eduric2001@gmail.com">Entrar em contato</a>
                     </div>
 
                     <div class="contact-strip">
-                        <span>Curitiba, PR</span>
-                        <span>Tel: (41) 9 9565-6056</span>
-                        <a href="mailto:eduric2001@gmail.com">eduric2001@gmail.com</a>
+                        <span id="location">Araucária — Capela Velha</span>
+                        <span id="contact-phone">Tel: (41) 9 9565-6056</span>
+                        <a id="contact-email-anchor" href="mailto:eduric2001@gmail.com">eduric2001@gmail.com</a>
                     </div>
 
                     <p class="muted-note">
@@ -410,7 +36,7 @@
                     </p>
                 </div>
 
-                <div class="stats">
+                <div id="stats-container" class="stats">
                     <div class="stat-card">
                         <strong>3+</strong>
                         <p>frentes de experiência unindo administração, atendimento e ambiente operacional.</p>
@@ -468,7 +94,7 @@
                     <section>
                         <div class="section-title"><h2>Competências</h2></div>
                         <div class="panel">
-                            <div class="badge-row">
+                            <div id="skills-container" class="badge-row">
                                 <span class="badge">Python</span>
                                 <span class="badge">C++</span>
                                 <span class="badge">Lógica de programação</span>
@@ -486,7 +112,7 @@
                 <div class="grid">
                     <section>
                         <div class="section-title"><h2>Experiência profissional</h2></div>
-                        <ul class="timeline">
+                        <ul id="experience-container" class="timeline">
                             <li>
                                 <div class="meta"><span>Março 2024 - atual</span><span>Espaço Livre Fashion Ltda</span></div>
                                 <strong>Assistente administrativo e operacional</strong>
@@ -514,13 +140,21 @@
 
                     <section>
                         <div class="section-title"><h2>Formação</h2></div>
-                        <div class="panel project">
+                        <div id="education-container" class="panel project">
                             <span class="tag">Em andamento</span>
                             <strong>Engenharia de Produção</strong>
                             <p>
                                 Universidade Tecnológica Federal do Paraná (UTFPR), 2º período.
                             </p>
                         </div>
+
+                        <section>
+                            <div class="section-title"><h2>Projetos</h2></div>
+                            <div id="projects-preview" class="panel project">
+                                <p>Projetos serão listados aqui. Clique em Ver projetos para ver a página completa.</p>
+                                <a class="btn btn-secondary" href="projects.html">Ver projetos</a>
+                            </div>
+                        </section>
 
                         <div class="section-title" style="margin-top: 22px;"><h2>Como posso ajudar uma empresa</h2></div>
                         <ul class="steps">
@@ -559,5 +193,7 @@
             </footer>
         </div>
     </main>
+</main>
+    <script src="assets/js/controller.js"></script>
 </body>
 </html>

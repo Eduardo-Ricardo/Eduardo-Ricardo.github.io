@@ -1,0 +1,43 @@
+{
+  "name": "Eduardo Ricardo da Silva Andrade",
+  "age": 25,
+  "location": "Araucária — Capela Velha",
+  "email": "eduric2001@gmail.com",
+  "phone": "(41) 9 9565-6056",
+  "headline": "Estudante de Engenharia de Produção — Buscando estágio em organização de processos",
+  "stats": [
+    {"label": "Experiências", "value": "3"},
+    {"label": "Áreas", "value": "2"},
+    {"label": "Objetivo", "value": "Estágio em Engenharia de Produção"}
+  ],
+  "about": "Profissional em formação com perfil prático e organizado. Tenho experiência em rotinas administrativas, emissão de notas fiscais, controle de fluxo e apoio à organização de processos. Busco estágio em Engenharia de Produção para aplicar e ampliar conhecimentos em melhoria contínua.",
+  "skills": [
+    {"category": "Técnicas", "items": [{"name":"Excel","level":"Intermediário"},{"name":"Python","level":"Básico"},{"name":"C++","level":"Básico"}]},
+    {"category": "Ferramentas", "items": [{"name":"Linux","level":"Intermediário"},{"name":"Pacote Office","level":"Avançado"},{"name":"Photoshop","level":"Básico"}]},
+    {"category": "Interpessoais", "items": [{"name":"Comunicação","level":"Bom"},{"name":"Organização","level":"Bom"}]}
+  ],
+  "experiences": [
+    {
+      "company": "Espaço Livre Fashion Ltda",
+      "role": "Assistente administrativo e operacional",
+      "start": "2024-03",
+      "end": "atual",
+      "responsibilities": ["Emissão de notas fiscais","Controle de fluxo de caixa","Planejamento de produção"],
+      "impact": "Melhoria no controle de estoque e suporte à redução de retrabalho nas rotinas de produção"
+    },
+    {
+      "company": "Service Tech Experience",
+      "role": "Agente de teleatendimento",
+      "start": "2022-07",
+      "end": "2023-08",
+      "responsibilities": ["Atendimento ao cliente","Suporte técnico"],
+      "impact": "Resolução ágil de chamados e melhoria no SLA de atendimento"
+    }
+  ],
+  "education": {"course":"Engenharia de Produção","school":"UTFPR","period":"2º período","expected_graduation":""},
+  "projects": [
+    {"title":"Projeto A","summary":"Breve descrição","link":"projects.html#projeto-a"}
+  ],
+  "cv_file": "EDUARDO RICARDO - CURRICULO.pdf",
+  "footerYear": 2026
+}
