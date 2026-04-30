@@ -1,4 +1,4 @@
-// Controller: popula a View com dados de data/profile.json
+// Controller: popula as seções dinâmicas com dados de data/profile.json
 document.addEventListener('DOMContentLoaded', () => {
   const dataPath = 'data/profile.json';
 
@@ -11,33 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(err => console.error('Controller error:', err));
 
   function populateView(data) {
-    safeSet('#name', data.name);
-    safeSet('#headline', data.headline);
-    safeSet('#location', data.location);
-    safeSet('#contact-phone', `Tel: ${data.phone}`);
-    const emailAnchor = document.querySelector('#contact-email-anchor');
-    if (emailAnchor) {
-      emailAnchor.href = `mailto:${data.email}`;
-      emailAnchor.textContent = data.email;
-    }
-    const contactEmailBtn = document.querySelector('#contact-email');
-    if (contactEmailBtn) contactEmailBtn.href = `mailto:${data.email}`;
-
-    const cvLink = document.querySelector('#cv-link');
-    if (cvLink && data.cv_file) cvLink.href = data.cv_file;
-
-    // Stats
-    const statsContainer = document.querySelector('#stats-container');
-    if (statsContainer && Array.isArray(data.stats)) {
-      statsContainer.innerHTML = ''; // clear fallback
-      data.stats.forEach(s => {
-        const card = document.createElement('div');
-        card.className = 'stat-card';
-        card.innerHTML = `<strong>${escapeHtml(s.value)}</strong><p>${escapeHtml(s.label)}</p>`;
-        statsContainer.appendChild(card);
-      });
-    }
-
     // Skills
     const skillsContainer = document.querySelector('#skills-container');
     if (skillsContainer && Array.isArray(data.skills)) {
@@ -64,7 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const strong = document.createElement('strong');
         strong.textContent = e.role || '';
         const p = document.createElement('p');
-        p.textContent = e.responsibilities ? e.responsibilities.join('; ') : '';
+        p.textContent = [
+          ...(Array.isArray(e.responsibilities) ? e.responsibilities : []),
+          e.impact ? `Impacto: ${e.impact}` : ''
+        ].filter(Boolean).join(' | ');
         li.appendChild(meta);
         li.appendChild(strong);
         li.appendChild(p);
@@ -81,43 +57,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Projects preview (basic)
-    const projectsPreview = document.querySelector('#projects-preview');
-    if (projectsPreview && Array.isArray(data.projects)) {
+    const projectsContainer = document.querySelector('#projects-container');
+    if (projectsContainer && Array.isArray(data.projects)) {
       const list = document.createElement('div');
       list.className = 'project';
-      list.innerHTML = '';
-      data.projects.slice(0,3).forEach(proj => {
+      projectsContainer.innerHTML = '';
+
+      data.projects.forEach(proj => {
         const container = document.createElement('div');
-        container.innerHTML = `<strong>${escapeHtml(proj.title)}</strong><p>${escapeHtml(proj.summary)}</p><a href="${escapeHtml(proj.link)}">Ver projeto</a>`;
+        container.className = 'panel';
+        container.innerHTML = `
+          <strong>${escapeHtml(proj.title)}</strong>
+          <p>${escapeHtml(proj.summary)}</p>
+          <a href="${escapeHtml(proj.link)}">Ver projeto</a>
+        `;
         list.appendChild(container);
       });
-      projectsPreview.innerHTML = '';
-      projectsPreview.appendChild(list);
+
+      projectsContainer.appendChild(list);
       const more = document.createElement('a');
       more.className = 'btn btn-secondary';
       more.href = 'projects.html';
       more.textContent = 'Ver todos os projetos';
-      projectsPreview.appendChild(more);
-    }
-
-    // Footer year
-    const footerSpan = document.querySelector('footer span');
-    if (footerSpan && data.footerYear) {
-      // update first footer span if it contains © or name
-      // find any node with © and replace year
-      document.querySelectorAll('footer span').forEach(span => {
-        if (span.textContent.includes('©')) {
-          span.textContent = `© ${data.footerYear} ${data.name.split(' ')[0]}`;
-        }
-      });
+      projectsContainer.appendChild(more);
     }
   }
 
   // helpers
-  function safeSet(selector, value) {
-    const el = document.querySelector(selector);
-    if (el && value !== undefined && value !== null) el.textContent = value;
-  }
   function formatPeriod(start, end) {
     if (!start && !end) return '';
     return `${start || ''} - ${end || ''}`;
