@@ -22,21 +22,21 @@
       "role": "Assistente administrativo e operacional",
       "start": "2024-03",
       "end": "atual",
-      "responsibilities": ["Emissão de notas fiscais","Controle de fluxo de caixa","Planejamento de produção"],
-      "impact": "Melhoria no controle de estoque e suporte à redução de retrabalho nas rotinas de produção"
+      "responsibilities": ["Emissão de notas fiscais","Controle de fluxo de caixa", "Operador de corte"],
+      "impact": "Suporte à redução de retrabalho nas rotinas de produção"
     },
     {
       "company": "Service Tech Experience",
       "role": "Agente de teleatendimento",
       "start": "2022-07",
       "end": "2023-08",
-      "responsibilities": ["Atendimento ao cliente","Suporte técnico"],
+      "responsibilities": ["Atendimento ao cliente passivo","Resolução de chamados"],
       "impact": "Resolução ágil de chamados e melhoria no SLA de atendimento"
     }
   ],
-  "education": {"course":"Engenharia de Produção","school":"UTFPR","period":"2º período","expected_graduation":""},
+  "education": {"course":"Engenharia de Produção","school":"UTFPR","period":"3º período","expected_graduation":"12/2030"},
   "projects": [
-    {"title":"Projeto A","summary":"Breve descrição","link":"projects.html#projeto-a"}
+    {"title":"Projeto A","summary":"Em breve","link":"projects.html#projeto-a"}
   ],
   "cv_file": "EDUARDO RICARDO - CURRICULO.pdf",
   "footerYear": 2026
