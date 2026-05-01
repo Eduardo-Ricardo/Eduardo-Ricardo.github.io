@@ -168,11 +168,23 @@ h1 {
     padding: 18px;
 }
 
+.stat-card-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.stat-card-head svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
 .stat-card strong {
     display: block;
-    font-size: 2rem;
-    line-height: 1;
-    margin-bottom: 8px;
+    font-size: 1.05rem;
+    line-height: 1.2;
     color: #fff;
 }
 
@@ -192,8 +204,32 @@ h1 {
     margin-top: 24px;
 }
 
+.content > .grid.grid-cols-1.md\:grid-cols-2.gap-6.items-start {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .content > .grid.grid-cols-1.md\:grid-cols-2.gap-6.items-start {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.content > .grid.grid-cols-1.md\:grid-cols-2.gap-6.items-start > .flex.flex-col.gap-6 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 section + section {
     margin-top: 24px;
+}
+
+.content > .grid.grid-cols-1.md\:grid-cols-2.gap-6.items-start section + section {
+    margin-top: 0;
 }
 
 .section-title {
@@ -252,6 +288,31 @@ section + section {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.badge-group {
+    display: grid;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.badge-group-title {
+    color: #fff;
+    font-size: 0.98rem;
+    letter-spacing: -0.01em;
+}
+
+.skills-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.badge-group-items {
+    gap: 8px;
 }
 
 .badge {
@@ -325,11 +386,25 @@ footer {
         display: grid;
     }
 
+    .content > .grid.grid-cols-1.md\:grid-cols-2.gap-6.items-start {
+        grid-template-columns: 1fr;
+    }
+
     .hero,
     .content,
     footer {
         padding-left: 22px;
         padding-right: 22px;
+    }
+
+    .skills-groups {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .content > .grid.grid-cols-1.md\:grid-cols-2.gap-6.items-start {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 

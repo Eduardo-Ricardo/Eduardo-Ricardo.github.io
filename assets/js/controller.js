@@ -16,12 +16,26 @@ document.addEventListener('DOMContentLoaded', () => {
     if (skillsContainer && Array.isArray(data.skills)) {
       skillsContainer.innerHTML = '';
       data.skills.forEach(cat => {
-        cat.items.forEach(it => {
+        const group = document.createElement('div');
+        group.className = 'badge-group';
+
+        const title = document.createElement('strong');
+        title.className = 'badge-group-title';
+        title.textContent = cat.category || '';
+
+        const items = document.createElement('div');
+        items.className = 'badge-row badge-group-items';
+
+        (Array.isArray(cat.items) ? cat.items : []).forEach(it => {
           const span = document.createElement('span');
           span.className = 'badge';
-          span.textContent = `${it.name}` + (it.level ? ` — ${it.level}` : '');
-          skillsContainer.appendChild(span);
+          span.textContent = it.name || '';
+          items.appendChild(span);
         });
+
+        group.appendChild(title);
+        group.appendChild(items);
+        skillsContainer.appendChild(group);
       });
     }
 

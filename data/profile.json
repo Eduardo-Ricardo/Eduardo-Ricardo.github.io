@@ -12,9 +12,40 @@
   ],
   "about": "Profissional em formação com perfil prático e organizado. Tenho experiência em rotinas administrativas, emissão de notas fiscais, controle de fluxo e apoio à organização de processos. Busco estágio em Engenharia de Produção para aplicar e ampliar conhecimentos em melhoria contínua.",
   "skills": [
-    {"category": "Técnicas", "items": [{"name":"Excel","level":"Intermediário"},{"name":"Python","level":"Básico"},{"name":"C++","level":"Básico"}]},
-    {"category": "Ferramentas", "items": [{"name":"Linux","level":"Intermediário"},{"name":"Pacote Office","level":"Avançado"},{"name":"Photoshop","level":"Básico"}]},
-    {"category": "Interpessoais", "items": [{"name":"Comunicação","level":"Bom"},{"name":"Organização","level":"Bom"}]}
+    {
+      "category": "Tecnologia & Dados",
+      "items": [
+        {"name": "Python"},
+        {"name": "C++"},
+        {"name": "Linux"},
+        {"name": "Excel Avançado"}
+      ]
+    },
+    {
+      "category": "Gestão & Operações",
+      "items": [
+        {"name": "Controle Administrativo"},
+        {"name": "Logística"},
+        {"name": "PCP/Produção"},
+        {"name": "Rotinas Fiscais"}
+      ]
+    },
+    {
+      "category": "Ferramentas",
+      "items": [
+        {"name": "Pacote Office"},
+        {"name": "Photoshop"},
+        {"name": "Illustrator"}
+      ]
+    },
+    {
+      "category": "Soft Skills",
+      "items": [
+        {"name": "Organização"},
+        {"name": "Comunicação"},
+        {"name": "Resolução de Problemas"}
+      ]
+    }
   ],
   "experiences": [
     {
