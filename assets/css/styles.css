@@ -168,11 +168,23 @@ h1 {
     padding: 18px;
 }
 
+.stat-card-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.stat-card-head svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
 .stat-card strong {
     display: block;
-    font-size: 2rem;
-    line-height: 1;
-    margin-bottom: 8px;
+    font-size: 1.05rem;
+    line-height: 1.2;
     color: #fff;
 }
 
