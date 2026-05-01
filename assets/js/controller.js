@@ -16,12 +16,25 @@ document.addEventListener('DOMContentLoaded', () => {
     if (skillsContainer && Array.isArray(data.skills)) {
       skillsContainer.innerHTML = '';
       data.skills.forEach(cat => {
+        const group = document.createElement('div');
+        group.className = 'skill-group';
+
+        const title = document.createElement('h3');
+        title.textContent = cat.category || '';
+
+        const row = document.createElement('div');
+        row.className = 'badge-row';
+
         cat.items.forEach(it => {
           const span = document.createElement('span');
           span.className = 'badge';
-          span.textContent = `${it.name}` + (it.level ? ` — ${it.level}` : '');
-          skillsContainer.appendChild(span);
+          span.textContent = `${it.name}`;
+          row.appendChild(span);
         });
+
+        group.appendChild(title);
+        group.appendChild(row);
+        skillsContainer.appendChild(group);
       });
     }
 
@@ -59,27 +72,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // Projects preview (basic)
     const projectsContainer = document.querySelector('#projects-container');
     if (projectsContainer && Array.isArray(data.projects)) {
-      const list = document.createElement('div');
-      list.className = 'project';
       projectsContainer.innerHTML = '';
 
       data.projects.forEach(proj => {
-        const container = document.createElement('div');
-        container.className = 'panel';
-        container.innerHTML = `
-          <strong>${escapeHtml(proj.title)}</strong>
-          <p>${escapeHtml(proj.summary)}</p>
-          <a href="${escapeHtml(proj.link)}">Ver projeto</a>
-        `;
-        list.appendChild(container);
-      });
+        const article = document.createElement('article');
+        article.className = 'project-card';
 
-      projectsContainer.appendChild(list);
-      const more = document.createElement('a');
-      more.className = 'btn btn-secondary';
-      more.href = 'projects.html';
-      more.textContent = 'Ver todos os projetos';
-      projectsContainer.appendChild(more);
+        const title = document.createElement('h3');
+        title.textContent = proj.title || '';
+
+        const summary = document.createElement('p');
+        summary.textContent = proj.summary || '';
+
+        const techs = document.createElement('div');
+        techs.className = 'project-techs';
+
+        (Array.isArray(proj.techs) ? proj.techs : []).forEach(tech => {
+          const tag = document.createElement('span');
+          tag.className = 'badge';
+          tag.textContent = tech;
+          techs.appendChild(tag);
+        });
+
+        article.appendChild(title);
+        article.appendChild(summary);
+        article.appendChild(techs);
+
+        if (proj.link) {
+          const link = document.createElement('a');
+          link.className = 'btn btn-secondary';
+          link.href = proj.link;
+          link.textContent = 'Ver projeto';
+          article.appendChild(link);
+        }
+
+        projectsContainer.appendChild(article);
+      });
+    }
+
+    const aboutContainer = document.querySelector('#about-container p');
+    if (aboutContainer && data.about) {
+      aboutContainer.textContent = data.about;
     }
   }
 
