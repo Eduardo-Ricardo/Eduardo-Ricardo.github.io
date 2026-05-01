@@ -268,13 +268,23 @@ section + section {
 
 .badge-group {
     display: grid;
-    gap: 10px;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .badge-group-title {
     color: #fff;
     font-size: 0.98rem;
     letter-spacing: -0.01em;
+}
+
+.skills-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
 }
 
 .badge-group-items {
@@ -357,6 +367,10 @@ footer {
     footer {
         padding-left: 22px;
         padding-right: 22px;
+    }
+
+    .skills-groups {
+        grid-template-columns: 1fr;
     }
 }
 
