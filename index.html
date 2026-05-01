@@ -5,20 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Eduardo Ricardo: estudante de Engenharia de Produção, com experiência administrativa, operacional e tecnologia aplicada à melhoria de processos.">
     <title>Eduardo Ricardo | Portfólio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <main class="page">
         <div class="shell">
             <section class="hero">
-                <div class="hero-main">
+                <div>
                     <div class="eyebrow"><span></span> Portfólio profissional para vagas e oportunidades de estágio</div>
-                    <h1>Estudante de Eng. de Produção</h1>
-                    <p class="hero-name">Eduardo Ricardo da Silva Andrade</p>
+                    <h1>Eduardo Ricardo da Silva Andrade</h1>
                     <p class="headline">
                         Estudante de Engenharia de Produção na UTFPR, com experiência real em rotinas administrativas,
                         operação, atendimento ao cliente e apoio à organização de processos. Eu ajudo equipes a ganhar
@@ -26,8 +21,8 @@
                     </p>
 
                     <div class="cta-row">
-                        <a class="btn btn-primary" href="EDUARDO RICARDO - CURRICULO.pdf" download>Baixar Currículo</a>
-                        <a class="btn btn-secondary" href="mailto:eduric2001@gmail.com">Entrar em Contato</a>
+                        <a class="btn btn-primary" href="EDUARDO RICARDO - CURRICULO.pdf" download>Baixar currículo em PDF</a>
+                        <a class="btn btn-secondary" href="mailto:eduric2001@gmail.com">Entrar em contato</a>
                     </div>
 
                     <div class="contact-strip">
@@ -35,29 +30,24 @@
                         <span>Tel: (41) 9 9565-6056</span>
                         <a href="mailto:eduric2001@gmail.com">eduric2001@gmail.com</a>
                     </div>
+
+                    <p class="muted-note">
+                        Sugestão: depois posso adaptar esta página para uma vaga específica, deixando o texto mais forte para área administrativa, industrial, dados ou tecnologia.
+                    </p>
                 </div>
 
-                <div class="hero-highlights" aria-label="Áreas de destaque">
-                    <div class="highlight-badge">
-                        <i class="fa-solid fa-gear" aria-hidden="true"></i>
-                        <div>
-                            <strong>Operações &amp; Logística</strong>
-                            <p>Visão prática para fluxo, organização e execução.</p>
-                        </div>
+                <div class="stats">
+                    <div class="stat-card">
+                        <strong>3</strong>
+                        <p>frentes de experiência unindo administração, atendimento e ambiente operacional.</p>
                     </div>
-                    <div class="highlight-badge">
-                        <i class="fa-solid fa-chart-column" aria-hidden="true"></i>
-                        <div>
-                            <strong>Controlo Administrativo</strong>
-                            <p>Rotinas fiscais, caixa e acompanhamento de dados.</p>
-                        </div>
+                    <div class="stat-card">
+                        <strong>2</strong>
+                        <p>áreas em que eu consigo gerar valor rápido: organização de processos e apoio operacional.</p>
                     </div>
-                    <div class="highlight-badge">
-                        <i class="fa-solid fa-code" aria-hidden="true"></i>
-                        <div>
-                            <strong>Tecnologia &amp; Dados</strong>
-                            <p>Base sólida em programação e análise para processos.</p>
-                        </div>
+                    <div class="stat-card">
+                        <strong>Estágio</strong>
+                        <p>objetivo claro: desenvolver experiência prática em Engenharia de Produção.</p>
                     </div>
                 </div>
             </section>
@@ -65,16 +55,21 @@
             <div class="content">
                 <section>
                     <div class="section-title"><h2>Sobre mim</h2></div>
-                    <div class="panel" id="about-container">
+                    <div class="panel">
                         <p>
-                            Sou estudante de Engenharia de Produção na UTFPR, com um perfil prático e organizado construído através de vivência real no mercado. Atualmente, atuo na área administrativa e operacional, lidando com emissão de notas, controle de caixa, logística e planejamento e execução de corte de matéria-prima. Essa rotina me ensinou a trabalhar sob pressão, cumprir prazos e ter atenção aos detalhes. Além disso, tenho uma forte base em tecnologia (Python, C++ e Linux) e raciocínio lógico, o que me permite enxergar os processos de ponta a ponta e propor melhorias.
+                            Sou um profissional em formação com perfil prático e organizado. Na rotina da Espaço Livre Fashion,
+                            atuo com emissão de notas fiscais, controle de fluxo de caixa, ponto, logística e planejamento de corte.
+                            Essa vivência me ensinou a lidar com pressão, prazos e responsabilidade com detalhes.
+                        </p>
+                        <p style="margin-top: 14px;">
+                            Também trago base em tecnologia, raciocínio lógico e atendimento ao cliente, o que me ajuda a conversar
+                            bem com pessoas diferentes e entender processos de ponta a ponta.
                         </p>
                     </div>
                 </section>
 
-                <div class="masonry-layout">
-                    <div class="masonry-column">
-                        <section>
+                <div class="grid">
+                    <section>
                         <div class="section-title"><h2>O que eu entrego</h2></div>
                         <ul class="focus-list">
                             <li>
@@ -90,8 +85,28 @@
                                 Experiência com cliente, equipe e atividades operacionais no dia a dia.
                             </li>
                         </ul>
-                        </section>
+                    </section>
 
+                    <section>
+                        <div class="section-title"><h2>Competências</h2></div>
+                        <div class="panel">
+                            <div id="skills-container" class="badge-row">
+                                <span class="badge">Python</span>
+                                <span class="badge">C++</span>
+                                <span class="badge">Lógica de programação</span>
+                                <span class="badge">Linux</span>
+                                <span class="badge">Pacote Office</span>
+                                <span class="badge">Controle administrativo</span>
+                                <span class="badge">Atendimento ao cliente</span>
+                                <span class="badge">Organização de processos</span>
+                                <span class="badge">Photoshop básico</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="grid">
+                    <section>
                         <div class="section-title"><h2>Experiência profissional</h2></div>
                         <ul id="experience-container" class="timeline">
                             <li>
@@ -103,7 +118,7 @@
                                 </p>
                             </li>
                             <li>
-                                <div class="meta"><span>Jul 2022 - Ago 2023</span><span>Service Tech</span></div>
+                                <div class="meta"><span>Jul 2022 - Ago 2023</span><span>Service Tech Experience</span></div>
                                 <strong>Agente de teleatendimento</strong>
                                 <p>
                                     Atendimento ao cliente, suporte e resolução ágil de problemas técnicos e operacionais.
@@ -117,59 +132,60 @@
                                 </p>
                             </li>
                         </ul>
-                        </section>
-                    </div>
+                    </section>
 
-                    <div class="masonry-column">
-                        <section>
-                            <div class="section-title"><h2>Competências</h2></div>
-                            <div class="panel">
-                                <div id="skills-container" class="skills-groups">
-                                    <div class="skill-group">
-                                        <h3>Tecnologia &amp; Dados</h3>
-                                        <div class="badge-row">
-                                            <span class="badge">Python</span>
-                                            <span class="badge">C++</span>
-                                            <span class="badge">Linux</span>
-                                            <span class="badge">Excel Avançado</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section>
+                    <section>
                         <div class="section-title"><h2>Formação</h2></div>
-                        <div id="education-container" class="panel education-card">
+                        <div id="education-container" class="panel project">
                             <span class="tag">Em andamento</span>
                             <strong>Engenharia de Produção</strong>
                             <p>
                                 Universidade Tecnológica Federal do Paraná (UTFPR), 2º período.
                             </p>
                         </div>
-                        </section>
 
                         <section>
                             <div class="section-title"><h2>Projetos</h2></div>
-                            <div id="projects-container" class="projects-grid">
-                                <article class="project-card">
-                                    <h3>Dashboard de indicadores operacionais</h3>
-                                    <p>Painel de acompanhamento de produção e ocorrências para dar visibilidade diária aos pontos críticos do processo.</p>
-                                    <div class="project-techs">
-                                        <span class="badge">Python</span>
-                                        <span class="badge">Excel</span>
-                                    </div>
-                                </article>
+                            <div id="projects-container" class="panel project">
+                                <p>Projetos serão listados aqui. Clique em Ver projetos para ver a página completa.</p>
+                                <a class="btn btn-secondary" href="projects.html">Ver projetos</a>
                             </div>
                         </section>
-                    </div>
+
+                        <div class="section-title" style="margin-top: 22px;"><h2>Como posso ajudar uma empresa</h2></div>
+                        <ul class="steps">
+                            <li>
+                                <strong>Apoio administrativo com responsabilidade</strong>
+                                Boa execução de rotinas que exigem organização e consistência.
+                            </li>
+                            <li>
+                                <strong>Melhoria de processos</strong>
+                                Olhar prático para identificar desperdício e simplificar etapas.
+                            </li>
+                            <li>
+                                <strong>Suporte em operação e comunicação</strong>
+                                Facilidade para atuar entre setores, pessoas e tarefas.
+                            </li>
+                        </ul>
+                    </section>
                 </div>
+
+                <section>
+                    <div class="footer-cta">
+                        <div>
+                            <h2 style="margin-bottom: 8px;">Pronto para mostrar seu valor</h2>
+                            <p style="color: var(--muted); max-width: 70ch;">
+                                Este portfólio já funciona como uma apresentação profissional. Se você quiser, eu posso agora deixar ele mais forte para uma área específica, como administrativo, dados, suporte, logística ou tecnologia.
+                            </p>
+                        </div>
+                        <a class="btn btn-primary" href="mailto:eduric2001@gmail.com">Falar comigo</a>
+                    </div>
+                </section>
             </div>
 
-            <footer class="site-footer">
-                <a href="https://www.linkedin.com/in/eduardo-ricardo-andrade" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a href="https://github.com/Eduardo-Ricardo" target="_blank" rel="noreferrer">GitHub</a>
-                <a href="mailto:eduric2001@gmail.com">eduric2001@gmail.com</a>
+            <footer>
+                <span>© 2026 Eduardo Ricardo</span>
+                <span>Hospedado no GitHub Pages</span>
             </footer>
         </div>
     </main>

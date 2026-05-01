@@ -10,43 +10,11 @@
     {"label": "Áreas", "value": "2"},
     {"label": "Objetivo", "value": "Estágio em Engenharia de Produção"}
   ],
-  "about": "Sou estudante de Engenharia de Produção na UTFPR, com um perfil prático e organizado construído através de vivência real no mercado. Atualmente, atuo na área administrativa e operacional, lidando com emissão de notas, controle de caixa, logística e planejamento e execução de corte de matéria-prima. Essa rotina me ensinou a trabalhar sob pressão, cumprir prazos e ter atenção aos detalhes. Além disso, tenho uma forte base em tecnologia (Python, C++ e Linux) e raciocínio lógico, o que me permite enxergar os processos de ponta a ponta e propor melhorias.",
+  "about": "Profissional em formação com perfil prático e organizado. Tenho experiência em rotinas administrativas, emissão de notas fiscais, controle de fluxo e apoio à organização de processos. Busco estágio em Engenharia de Produção para aplicar e ampliar conhecimentos em melhoria contínua.",
   "skills": [
-    {
-      "category": "Tecnologia & Dados",
-      "items": [
-        {"name": "Python"},
-        {"name": "C++"},
-        {"name": "Linux"},
-        {"name": "Excel Avançado"}
-      ]
-    },
-    {
-      "category": "Gestão & Operações",
-      "items": [
-        {"name": "Controlo Administrativo"},
-        {"name": "Logística"},
-        {"name": "PCP/Produção"},
-        {"name": "Rotinas Fiscais"}
-      ]
-    },
-    {
-      "category": "Ferramentas",
-      "items": [
-        {"name": "Pacote Office"},
-        {"name": "Photoshop"},
-        {"name": "Illustrator"},
-        {"name": "Canva"}
-      ]
-    },
-    {
-      "category": "Soft Skills",
-      "items": [
-        {"name": "Organização"},
-        {"name": "Comunicação"},
-        {"name": "Resolução de Problemas"}
-      ]
-    }
+    {"category": "Técnicas", "items": [{"name":"Excel","level":"Intermediário"},{"name":"Python","level":"Básico"},{"name":"C++","level":"Básico"}]},
+    {"category": "Ferramentas", "items": [{"name":"Linux","level":"Intermediário"},{"name":"Pacote Office","level":"Avançado"},{"name":"Photoshop","level":"Básico"}]},
+    {"category": "Interpessoais", "items": [{"name":"Comunicação","level":"Bom"},{"name":"Organização","level":"Bom"}]}
   ],
   "experiences": [
     {
@@ -58,42 +26,17 @@
       "impact": "Suporte à redução de retrabalho nas rotinas de produção"
     },
     {
-      "company": "Service Tech",
+      "company": "Service Tech Experience",
       "role": "Agente de teleatendimento",
       "start": "2022-07",
       "end": "2023-08",
       "responsibilities": ["Atendimento ao cliente passivo","Resolução de chamados"],
       "impact": "Resolução ágil de chamados e melhoria no SLA de atendimento"
-    },
-    {
-      "company": "Eletrofrio Refrigeração Ltda",
-      "role": "Jovem aprendiz",
-      "start": "2020-09",
-      "end": "2021-12",
-      "responsibilities": ["Apoio administrativo", "Suporte à rotina operacional industrial"],
-      "impact": "Vivência prática em processos industriais e organização de tarefas"
     }
   ],
-  "education": {"course":"Engenharia de Produção","school":"UTFPR","period":"2º período","expected_graduation":"12/2030"},
+  "education": {"course":"Engenharia de Produção","school":"UTFPR","period":"3º período","expected_graduation":"12/2030"},
   "projects": [
-    {
-      "title": "Dashboard de indicadores operacionais",
-      "summary": "Estruturei um painel para acompanhar dados de operação, produtividade e gargalos com atualização rápida para apoiar decisões de rotina.",
-      "techs": ["Python", "Excel"],
-      "link": "projects.html"
-    },
-    {
-      "title": "Controle de caixa e fluxo administrativo",
-      "summary": "Modelei uma rotina de registo e conferência para reduzir divergências e melhorar a visibilidade diária do caixa e das movimentações.",
-      "techs": ["Excel", "Pacote Office"],
-      "link": "projects.html"
-    },
-    {
-      "title": "Planejamento de corte de matéria-prima",
-      "summary": "Organizei um processo de planeamento de corte para reduzir desperdício e padronizar a execução da equipa no chão de operação.",
-      "techs": ["Lógica", "PCP/Produção"],
-      "link": "projects.html"
-    }
+    {"title":"Projeto A","summary":"Em breve","link":"projects.html#projeto-a"}
   ],
   "cv_file": "EDUARDO RICARDO - CURRICULO.pdf",
   "footerYear": 2026
