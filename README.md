@@ -17,6 +17,6 @@ Como testar localmente
 2. Verifique que o conteúdo é populado automaticamente (se o browser bloquear fetch local, use um servidor simples como `python -m http.server`).
 
 Deploy
-- Este repositório está preparado para GitHub Pages (conteúdo servido do root). Ao subir para `main` o site será publicado como `https://<username>.github.io`.
+- Este repositório está preparado para GitHub Pages (conteúdo servido do root). Ao subir para `main` o site será publicado como `https://Eduardo-Ricardo.github.io`.
 
 
